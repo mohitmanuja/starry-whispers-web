@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Star, Sparkles, MessageCircle, MapPin, Clock, ShieldCheck, Quote, CheckCircle2, Phone } from "lucide-react";
+import { ArrowRight, Star, Sparkles, MessageCircle, MapPin, Clock, ShieldCheck, Quote, CheckCircle2, Phone, Instagram } from "lucide-react";
 import portrait from "@/assets/astrologer-portrait.jpg";
 import desk from "@/assets/astrologer-desk.jpg";
 import { SERVICES } from "@/lib/services";
@@ -188,6 +188,16 @@ function Home() {
               Book a personal consultation — online or in person at our Gaur City 1 office.
               Share your details and we'll continue the conversation on WhatsApp.
             </p>
+            <div className="mt-6 flex flex-wrap gap-4">
+              <div className="rounded-2xl border border-gold/30 bg-card/80 px-5 py-3">
+                <p className="text-xs text-muted-foreground">Call consultation</p>
+                <p className="font-display text-2xl text-foreground">{SITE.pricing.currency}{SITE.pricing.call.toLocaleString("en-IN")}</p>
+              </div>
+              <div className="rounded-2xl border border-gold/30 bg-card/80 px-5 py-3">
+                <p className="text-xs text-muted-foreground">Meeting / Video call</p>
+                <p className="font-display text-2xl text-foreground">{SITE.pricing.currency}{SITE.pricing.meeting.toLocaleString("en-IN")}</p>
+              </div>
+            </div>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-gold px-6 py-3.5 text-sm font-medium text-primary-foreground shadow-glow">
                 Book consultation <ArrowRight className="h-4 w-4" />
@@ -200,6 +210,10 @@ function Home() {
             <div className="mt-10 grid sm:grid-cols-2 gap-4 text-sm text-muted-foreground">
               <p className="flex gap-2"><MapPin className="h-4 w-4 mt-0.5 text-gold shrink-0" />{SITE.address}</p>
               <p className="flex gap-2"><Clock className="h-4 w-4 mt-0.5 text-gold shrink-0" />{SITE.hours}</p>
+              <a href={SITE.instagram} target="_blank" rel="noreferrer" className="flex gap-2 hover:text-foreground transition">
+                <Instagram className="h-4 w-4 mt-0.5 text-gold shrink-0" />
+                <span>@saptarishis_astrology_service</span>
+              </a>
             </div>
           </div>
         </div>
