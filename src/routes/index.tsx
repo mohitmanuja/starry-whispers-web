@@ -48,7 +48,7 @@ function Home() {
             </div>
 
             <div className="mt-12 grid grid-cols-3 gap-6 max-w-2xl">
-              <Stat k="15+" v="Years guiding clients" />
+              <Stat k="10+" v="Years guiding clients" />
               <Stat k="5000+" v="Charts read" />
               <Stat k="5.0★" v="Google rating" />
             </div>
@@ -133,7 +133,7 @@ function Home() {
             <SectionHeading
               eyebrow="Why Saptarishis"
               title="Honest readings. Real remedies."
-              subtitle="No fear-based advice, no unnecessary rituals. Just clear guidance rooted in classical Vedic astrology and over 15 years of practice."
+              subtitle="No fear-based advice, no unnecessary rituals. Just clear guidance rooted in classical Vedic astrology and over 10 years of practice."
             />
             <ul className="mt-8 space-y-5">
               <Why icon={ShieldCheck} title="Confidential & non-judgmental" text="Your story stays between us. Always." />

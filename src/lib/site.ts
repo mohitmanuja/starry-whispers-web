@@ -7,7 +7,7 @@ export const SITE = {
   whatsapp: "919990952711",
   phoneDisplay: "+91 99909 52711",
   address:
-    "3241, 7th Ave, Greater Noida West, Gaur City 1, Sector 4, Ghaziabad, Uttar Pradesh 201318, India",
+    "7th Ave, Greater Noida West, Gaur City 1, Sector 4, Ghaziabad, Uttar Pradesh 201318, India",
   hours: "Monday – Saturday · 12:00 PM – 6:00 PM",
   mapsUrl: "https://maps.app.goo.gl/zgVmSAK4KwAzSR7M6",
   mapsEmbed:
