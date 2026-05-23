@@ -197,6 +197,10 @@ function Home() {
                 <p className="text-xs text-muted-foreground">Meeting / Video call</p>
                 <p className="font-display text-2xl text-foreground">{SITE.pricing.currency}{SITE.pricing.meeting.toLocaleString("en-IN")}</p>
               </div>
+              <div className="rounded-2xl border border-gold/30 bg-card/80 px-5 py-3">
+                <p className="text-xs text-muted-foreground">Vastu consultation</p>
+                <p className="font-display text-2xl text-foreground">{SITE.pricing.currency}{SITE.pricing.vastu.toLocaleString("en-IN")}</p>
+              </div>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-gold px-6 py-3.5 text-sm font-medium text-primary-foreground shadow-glow">
