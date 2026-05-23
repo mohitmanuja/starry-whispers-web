@@ -5,10 +5,8 @@ import {
   createRootRouteWithContext,
   useRouter,
   HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
 
-import appCss from "../styles.css?url";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
@@ -56,41 +54,20 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Saptarishis Astrology by Soniya Sharma | Vedic Astrologer in Greater Noida" },
       { name: "description", content: "Trusted Vedic astrologer Soniya Sharma — Kundli, marriage matching, career, vastu, numerology and tarot consultations in Greater Noida West, Ghaziabad." },
-      { name: "author", content: "Saptarishis Astrology" },
-      { property: "og:title", content: "Saptarishis Astrology by Soniya Sharma | Vedic Astrologer in Greater Noida" },
-      { property: "og:description", content: "Trusted Vedic astrologer Soniya Sharma — Kundli, marriage matching, career, vastu, numerology and tarot consultations in Greater Noida West, Ghaziabad." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Saptarishis Astrology by Soniya Sharma | Vedic Astrologer in Greater Noida" },
-      { name: "twitter:description", content: "Trusted Vedic astrologer Soniya Sharma — Kundli, marriage matching, career, vastu, numerology and tarot consultations in Greater Noida West, Ghaziabad." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b4a19c9b-c95f-403b-a8e0-8e9b990d5224/id-preview-d2958d59--478a0018-ed2a-4192-a73d-3437371cb9b9.lovable.app-1779095543335.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b4a19c9b-c95f-403b-a8e0-8e9b990d5224/id-preview-d2958d59--478a0018-ed2a-4192-a73d-3437371cb9b9.lovable.app-1779095543335.png" },
     ],
-    links: [{ rel: "stylesheet", href: appCss }],
   }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
 
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head><HeadContent /></head>
-      <body>{children}<Scripts /></body>
-    </html>
-  );
-}
-
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
+      <HeadContent />
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1"><Outlet /></main>
